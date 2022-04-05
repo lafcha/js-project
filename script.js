@@ -1,38 +1,44 @@
 $(document).ready(function () {
 
-	$.ajax({
-		url: "https://catfact.ninja/facts?limit=5",
-		//La méthode d'envoi (type de requête)
-		method: "GET",
-		//Le format de réponse attendu
-		dataType: "json",
-	}).then(function (data) {
-		
-		//console.log("status vérifié", data.status.verified)
+	// Au lancement de la page
+	getFiveFacts();
 
-		// Get all paragraphs 
-
-	let allArticles = document.getElementsByClassName('fact-p');
-	let allfactsNb = document.getElementsByClassName('fact-nb');
+	//Au click sur le bouton relaod des facts
+	$('#facts-reload').click(getFiveFacts);
 
 
-	//Get data according to the matching index of allParagraphs table
+	function getFiveFacts() {
 
-	for (let i = 0; i < allArticles.length; i++) {
-	
-		//Facts
-		let paragraph = allArticles[i];
-		let catFact = data.data[i].fact;
-		paragraph.append(catFact);
+		$.ajax({
+			url: "https://catfact.ninja/facts?limit=5",
+			//La méthode d'envoi (type de requête)
+			method: "GET",
+			//Le format de réponse attendu
+			dataType: "json",
+		}).then(function (data) {
 
-		//Fact nb
-		let factNb = i+1;
-		let factNbParagraph = allfactsNb[i];
-		factNbParagraph.append(factNb);
-	
-	};
-	})
-	
+			$('#facts-container').empty()
+			// Get the number of data gotten by the API
+			let nbOfFacts = data.data.length;
 
-	
+			// Getting the facts-section
+
+			for (let i = 0; i < nbOfFacts; i++) {
+
+				//Adding Fact nb
+				let factNb = i + 1;
+				let catFact = data.data[i].fact;
+				let factSection = $('#facts-section');
+				console.log('fact-section', factSection);
+				$('#facts-container').append(
+					"<h3 class=\"fact-nb\">Fact n°" + factNb + "</h3><div class=\"fact-line\"></div><p class=\"fact-p\">" + catFact + "</p>"
+				)
+
+			}
+		})
+
+
+
+
+	}
 })

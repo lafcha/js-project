@@ -40,12 +40,11 @@ h1 {
 }
 
 
-/************* LATEST FACTS ***********/
+/************* FACTS ABOUT CATS ***********/
 
 article {
     margin: 4rem 0;
    
- 
 }
 
 article:last-child{
@@ -55,6 +54,7 @@ article:last-child{
 .fact-p {
     font-size: 1.2rem;
     text-align: center;
+    margin-bottom: 2rem;
 } 
 
 .fact-nb {
@@ -76,6 +76,22 @@ article:last-child{
     text-align: center;
     border-bottom: solid 1px;
     padding-bottom: 1rem;
+}
+
+#facts-section h2 {
+    margin-bottom: 1rem;
+}
+
+#facts-subtitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+#facts-reload{
+    color : #4A8C6Dff;
+    transform: translate(5px, 30%);
+    font-size: 1.5rem;
 }
 
 /***********GALLERY*******************/
