@@ -1,0 +1,184 @@
+/*********** GENERAL*************/
+body {
+    font-family: 'Spartan', sans-serif;
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+section {
+    padding: 3rem 1rem 0 1rem;
+}
+
+
+/************* HEADER **************/
+
+
+
+nav{
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+  
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 2rem ;
+    font-family: 'Send Flowers', cursive;
+}
+
+.carousel-pic{
+    width: 100vw;
+}
+
+
+/************* LATEST FACTS ***********/
+
+article {
+    margin: 2rem 0;
+ 
+}
+
+article:last-child{
+    margin :0;
+}
+
+.fact-p {
+    font-size: 1.2rem;
+    text-align: justify;
+} 
+
+.fact-date {
+    color:  #4A8C6Dff;
+    font-style: italic;
+    text-align: end;
+    margin-top: .5rem;
+    
+}
+
+/***********GALLERY*******************/
+
+#gallery-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gallery-pic {
+    width: 300px;
+}
+/*************COMMENTS****************/
+
+#comments-section{
+    padding-bottom: 2rem;
+}
+
+form {
+    margin-bottom: 2.5rem;
+}
+
+.comment {
+    margin-bottom: 2.5rem;
+    border-bottom: solid 1px ;
+}
+
+.comment-detail {
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    text-transform: uppercase;
+    color: #4A8C6Dff;
+    font-size: .8rem;
+    letter-spacing: .2rem;
+    margin-bottom: .2rem;
+    font-weight: bold;
+}
+
+.comment-date {
+    text-transform: uppercase;
+    color: grey;
+    font-size: .7rem;
+    margin-bottom: .2rem;
+}
+
+.comment-text {
+ 
+    padding-bottom: 2rem;
+}
+
+.comment-text:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.comment:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0rem;
+    
+}
+
+/************ FOOTER ****************/
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p span {
+    color : #4A8C6Dff;
+}
+
+footer p:last-of-type {
+    color : #4A8C6Dff;
+}
+
+/******************* MEDIA QUERIES ******************/
+
+
+
+@media (min-width: 720px)  {
+
+    .carousel-container {
+        height: 500px;
+        overflow: hidden;
+    }
+   
+    .gallery-pic {
+        width: 300px;
+    }
+
+    section {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+}
+
+@media (min-width: 1250px)  {
+
+    h1 {
+        padding: 5rem;
+    }
+
+    #gallery-container {
+        width: 100%;
+    }
+
+    section {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    
+}
