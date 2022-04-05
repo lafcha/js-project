@@ -40,43 +40,8 @@ h1 {
 }
 
 
-/************* FACTS ABOUT CATS ***********/
+/************* FACTS ABOUT SPACE ***********/
 
-article {
-    margin: 4rem 0;
-   
-}
-
-article:last-child{
-    margin :0;
-}
-
-.fact-p {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-} 
-
-.fact-nb {
-    text-transform: uppercase;
-    color: #4A8C6Dff;
-    font-size: 1.2rem;
-    letter-spacing: .2rem;
-    font-weight: bold;
-    margin-top: .5rem;
-    text-align: center;
-    
-}
-
-.fact-line {
-    width: 30%;
-    margin : auto;
-    color: #4A8C6Dff;
-    margin-bottom: 1rem;
-    text-align: center;
-    border-bottom: solid 1px;
-    padding-bottom: 1rem;
-}
 
 #facts-section h2 {
     margin-bottom: 1rem;
@@ -89,10 +54,72 @@ article:last-child{
 }
 
 #facts-reload{
-    color : #4A8C6Dff;
+    color : #b03eae;
     transform: translate(5px, 30%);
     font-size: 1.5rem;
 }
+
+
+article {
+    margin: 4rem 0;
+   
+}
+
+article:last-child{
+    margin :0;
+}
+
+.fact-container {
+    border : solid 2px #b03eae;
+    border-radius: 10px;
+}
+
+.fact-container h3 {
+    line-height: 1.2rem;
+}
+
+.title-container {
+    border-bottom: solid 2px #b03eae;
+    padding: 1rem 1rem ;
+    background-color: rgba(176, 62, 174, 0.32);
+}
+
+.fact-image {
+    max-height: 200px;
+    width: 30%;
+}
+
+.fact-image img {
+    max-height:  200px;
+}
+
+.content-container {
+    display: flex;
+  
+}
+
+.article-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.article-detail {
+    margin : .5rem 0;
+}
+
+.article-visit-button {
+    background-color: #b03eae;
+    color: white;
+    border-radius: 10px;
+    padding : .5rem;
+    text-align: center;
+   font-weight: bold;
+   width: 60px;
+}
+
+
+
 
 /***********GALLERY*******************/
 
@@ -129,7 +156,7 @@ form {
 
 h3 {
     text-transform: uppercase;
-    color: #4A8C6Dff;
+    color: #b03eae;
     font-size: .8rem;
     letter-spacing: .2rem;
     margin-bottom: .2rem;
@@ -167,11 +194,11 @@ footer {
 }
 
 footer p span {
-    color : #4A8C6Dff;
+    color : #b03eae;
 }
 
 footer p:last-of-type {
-    color : #4A8C6Dff;
+    color : #b03eae;
     text-transform: uppercase;
     font-size: .7rem;
     letter-spacing: .2rem;

@@ -10,28 +10,27 @@ $(document).ready(function () {
 	function getFiveFacts() {
 
 		$.ajax({
-			url: "https://catfact.ninja/facts?limit=5",
+			url: "https://api.spaceflightnewsapi.net/v3/articles?_limit=5",
 			//La méthode d'envoi (type de requête)
 			method: "GET",
 			//Le format de réponse attendu
 			dataType: "json",
 		}).then(function (data) {
 
+			console.log(data)
+
 			$('#facts-container').empty()
 			// Get the number of data gotten by the API
-			let nbOfFacts = data.data.length;
+			let nbOfFacts = data.length;
 
 			// Getting the facts-section
 
 			for (let i = 0; i < nbOfFacts; i++) {
 
-				//Adding Fact nb
-				let factNb = i + 1;
-				let catFact = data.data[i].fact;
-				let factSection = $('#facts-section');
-				console.log('fact-section', factSection);
+				let article = data[i];
+
 				$('#facts-container').append(
-					"<h3 class=\"fact-nb\">Fact n°" + factNb + "</h3><div class=\"fact-line\"></div><p class=\"fact-p\">" + catFact + "</p>"
+					"<article class=\"fact-container\"><div class=\"title-container\"><h3>" + article.title + "</h3><div class=\"content-container\"><div class=\"fact-image\"><img src=\""+ article.imageUrl +"\"/></div><div class=\"article-details\"><p class=\"article-publication-date article-detail\">Published on:" + article.publishedAt +"</p><p class=\"article-website article-detail\">Website:" + article.newsSite + "</p><a class=\"article-visit-button article-detail\" href=\""+ article.url +"\">Visit</a></div></div></article>"
 				)
 
 			}
