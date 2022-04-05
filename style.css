@@ -43,7 +43,8 @@ h1 {
 /************* LATEST FACTS ***********/
 
 article {
-    margin: 2rem 0;
+    margin: 4rem 0;
+   
  
 }
 
@@ -53,15 +54,28 @@ article:last-child{
 
 .fact-p {
     font-size: 1.2rem;
-    text-align: justify;
+    text-align: center;
 } 
 
-.fact-date {
-    color:  #4A8C6Dff;
-    font-style: italic;
-    text-align: end;
+.fact-nb {
+    text-transform: uppercase;
+    color: #4A8C6Dff;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    font-weight: bold;
     margin-top: .5rem;
+    text-align: center;
     
+}
+
+.fact-line {
+    width: 30%;
+    margin : auto;
+    color: #4A8C6Dff;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: solid 1px;
+    padding-bottom: 1rem;
 }
 
 /***********GALLERY*******************/
@@ -142,6 +156,11 @@ footer p span {
 
 footer p:last-of-type {
     color : #4A8C6Dff;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .2rem;
+    margin-top: .5rem;
+    font-weight: bold;
 }
 
 /******************* MEDIA QUERIES ******************/
