@@ -1,79 +1,113 @@
-$(document).ready(function () {
 
-	// Au lancement de la page
-	getFiveFacts();
+(function (window, document, undefined) {
 
-	//Au click sur le bouton relaod des facts
-	$('#facts-reload').click(getFiveFacts);
+	window.onload = init;
 
-
-	function getFiveFacts() {
-		console.log("hello")
-
-		$.ajax({
-			url: "https://api.spaceflightnewsapi.net/v3/articles?_limit=5",
-			//La méthode d'envoi (type de requête)
-			method: "GET",
-			//Le format de réponse attendu
-			dataType: "json",
-		}).then(function (data) {
-			 
-
-			$('#facts-container').empty()
-			// Get the number of data gotten by the API
-			let nbOfFacts = data.length;
-
-			// Getting the facts-section
-
-			for (let i = 0; i < nbOfFacts; i++) {
-
-				let article = data[i];
-
-				createArticle(article);
-			
-			}
-		})
-
-		.fail(function(error){
-			alert("La requête s'est terminée en échec. Infos : " + JSON.stringify(error));
-		})
+	function init() {
 
 
+		// Au lancement de la page
+		//displayFacts();
+
+		//Au click sur le bouton relaod des facts
+		document.getElementById('facts-reload').addEventListener('click', displayFacts);
+
+		function displayFacts() {
+
+			const request = new Request('https://api.spaceflightnewsapi.net/v3/articles?_limit=5');
+
+			fetch(request)
+
+				.then(response => response.json())
+				.then(
+					function (data) {
+						let factsContainer = document.getElementById('facts-container');
+						factsContainer.innerHTML = "";
+
+						// Get the number of data gotten by the API
+						let nbOfFacts = data.length;
+
+						// Getting the facts-section
+
+						for (let i = 0; i < nbOfFacts; i++) {
+
+							let article = data[i];
+
+							createArticle(article);
+
+						}
+					}
+				)
+				.catch(function (error) {
+					let alert = document.createElement('div');
+					alert.className = 'facts-subtitle';
+					alert.innerHTML = "Le serveur n'a pas répondu. Erreur " + error;
+
+					let subtitle = document.getElementById('facts-subtitle');
+					let factsSection = document.getElementById('facts-section');
+					factsSection.removeChild(subtitle);
+					factsSection.appendChild(alert);
+
+				})
+
+		}
+
+		function createArticle(article) {
+
+
+			//Creation of the article 
+			let newArticle = document.createElement("article");
+			newArticle.className = 'fact-container';
+
+			//Creation of title container
+			newArticle.innerHTML = "<div class=\"title-container\"><h3>" + article.title + "</h3></div>";
+
+			// Création de contentContainer 
+			let contentContainer = document.createElement("div");
+			contentContainer.className = 'content-container';
+
+			contentContainer.innerHTML = "<div class=\"fact-image\"><img src=\"" + article.imageUrl + "\"/>";
+
+			//Création de details	
+			let articleDetails = document.createElement("div");
+			articleDetails.className = "article-details";
+			//Ajout des enfants
+
+			//Recouper la date
+			let dateFromAPI = article.publishedAt.slice(0, 10);
+
+			// On créer les éléments
+
+			//Details 
+			let articleDetail = document.createElement('p');
+			articleDetail.className = 'article-publication-date article-detail';
+			articleDetail.innerHTML = "Published on: " + dateFromAPI;
+			articleDetails.appendChild(articleDetail);
+
+			//Website
+			let website = document.createElement('p');
+			website.className = 'article-website article-detail';
+			website.innerHTML = "Website: " + article.newsSite;
+			articleDetails.appendChild(website);
+
+			//Visit Button
+			let visitButton = document.createElement('a');
+			visitButton.className = 'article-visit-button article-detail';
+			visitButton.setAttribute('src', article.url);
+			visitButton.innerHTML = "Visit";
+			articleDetails.appendChild(visitButton);
+
+			// On relie à containContainer
+			contentContainer.appendChild(articleDetails)
+
+
+			newArticle.appendChild(contentContainer);
+
+			let factsContainer = document.getElementById('facts-container');
+			factsContainer.appendChild(newArticle);
+
+
+		}
 	}
 
-	function createArticle(article) {
-	
-		
-		//Creation of the article 
-		let newArticle = $("<article class=\"fact-container\"></article>");
-
-		//Creation of title container
-		newArticle.append("<div class=\"title-container\"><h3>" + article.title + "</h3></div>");
-
-		// Création de contentContainer 
-		let contentContainer = $("<div class=\"content-container\"></div>");
-
-		contentContainer.append("<div class=\"fact-image\"><img src=\"" + article.imageUrl + "\"/>");
-		
-		//Création de details	
-		let articleDetail = $("<div class=\"article-details\"></div>");
-		//Ajout des enfants
-
-		//Recouper la date
-
-		let date =  article.publishedAt.slice(0,10)
-
-		articleDetail.append("<p class=\"article-publication-date article-detail\">Published on: " + date + "</p>");
-		articleDetail.append("<p class=\"article-website article-detail\">Website:" + article.newsSite + "</p>");
-		articleDetail.append("<a class=\"article-visit-button article-detail\" href=\"" + article.url + "\">Visit</a>");
-		// On relie à containContainer
-		contentContainer.append(articleDetail)
-
-		//On relie contentContainer à newsArticle
-		newArticle.append(contentContainer);
-		
-		//On ajoute l'article crée à facts-container
-		$('#facts-container').append(newArticle);
-	}
-
-})
+})(window, document, undefined);
