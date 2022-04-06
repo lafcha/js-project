@@ -1,246 +1,252 @@
 /*********** GENERAL*************/
 body {
-    font-family: 'Spartan', sans-serif;
+  font-family: "Spartan", sans-serif;
 }
 
-
 h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 3rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 section {
-    padding: 3rem 1rem 0 1rem;
+  padding: 3rem 1rem 0 1rem;
 }
-
 
 /************* HEADER **************/
 
-
-
-nav{
-    display: flex;
-    width: 100vw;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 1rem;
-  
+nav {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 1rem;
 }
 
 h1 {
-    font-size: 3.5rem;
-    text-align: center;
-    padding: 2rem ;
-    font-family: 'Send Flowers', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Send Flowers", cursive;
 }
 
-.carousel-pic{
-    width: 100vw;
+.carousel-pic {
+  width: 100vw;
 }
-
 
 /************* FACTS ABOUT SPACE ***********/
 
-
 #facts-section h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 #facts-subtitle {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-style: italic;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-style: italic;
 }
 
-#facts-reload{
-    color : #b03eae;
-    transform: translate(5px, 30%);
-    font-size: 1.5rem;
+#facts-reload {
+  color: #b03eae;
+  transform: translate(5px, 30%);
+  font-size: 1.5rem;
 }
-
 
 article {
-    margin: 4rem 0;
-   
+  margin: 4rem 0;
 }
 
-article:last-child{
-    margin :0;
+article:last-child {
+  margin: 0;
 }
 
 .fact-container {
-    border : solid 2px #b03eae;
-    border-radius: 10px;
+  border: solid 2px #b03eae;
+  border-radius: 10px;
 }
 
 .fact-container h3 {
-    line-height: 1.2rem;
+  line-height: 1.2rem;
 }
 
 .title-container {
-    border-bottom: solid 2px #b03eae;
-    padding: 1rem 1rem ;
-    background-color: rgba(176, 62, 174, 0.32);
+  border-bottom: solid 2px #b03eae;
+  padding: 1rem 1rem;
+  background-color: rgba(176, 62, 174, 0.32);
 }
 
 .fact-image {
-    max-height: 200px;
-    width: 30%;
+  max-height: 200px;
+  overflow: hidden;
+  margin: auto;
 }
 
 .fact-image img {
-    max-height:  200px;
+  max-height: 200px;
 }
 
 .content-container {
-    display: flex;
-  
+  display: flex;
+  flex-direction: column;
 }
 
 .article-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 .article-detail {
-    margin : .5rem 0;
+  margin: 0.5rem 0;
+  text-align: center;
+  padding-bottom: .5rem;
 }
 
 .article-visit-button {
-    background-color: #b03eae;
-    color: white;
-    border-radius: 10px;
-    padding : .5rem;
-    text-align: center;
-   font-weight: bold;
-   width: 60px;
+  background-color: #b03eae;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  width: 60px;
+  margin: auto;
+  text-decoration: none;
 }
-
 
 
 
 /***********GALLERY*******************/
 
 #gallery-container {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .gallery-pic {
-    width: 300px;
+  width: 300px;
 }
 /*************COMMENTS****************/
 
-#comments-section{
-    padding-bottom: 2rem;
+#comments-section {
+  padding-bottom: 2rem;
 }
 
 form {
-    margin-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .comment {
-    margin-bottom: 2.5rem;
-    border-bottom: solid 1px ;
+  margin-bottom: 2.5rem;
+  border-bottom: solid 1px;
 }
 
 .comment-detail {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 h3 {
-    text-transform: uppercase;
-    color: #b03eae;
-    font-size: .8rem;
-    letter-spacing: .2rem;
-    margin-bottom: .2rem;
-    font-weight: bold;
+  text-transform: uppercase;
+  color: #b03eae;
+  font-size: 0.8rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.2rem;
+  font-weight: bold;
 }
 
 .comment-date {
-    text-transform: uppercase;
-    color: grey;
-    font-size: .7rem;
-    margin-bottom: .2rem;
+  text-transform: uppercase;
+  color: grey;
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
 }
 
 .comment-text {
- 
-    padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 .comment-text:last-of-type {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-
 .comment:last-of-type {
-    border-bottom: none;
-    margin-bottom: 0rem;
-    
+  border-bottom: none;
+  margin-bottom: 0rem;
 }
 
 /************ FOOTER ****************/
 
 footer {
-    padding: 1rem;
-    text-align: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 footer p span {
-    color : #b03eae;
+  color: #b03eae;
 }
 
 footer p:last-of-type {
-    color : #b03eae;
-    text-transform: uppercase;
-    font-size: .7rem;
-    letter-spacing: .2rem;
-    margin-top: .5rem;
-    font-weight: bold;
+  color: #b03eae;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
 
 /******************* MEDIA QUERIES ******************/
 
+@media (min-width: 720px) {
+  .carousel-container {
+    height: 500px;
+    overflow: hidden;
+  }
 
+  .gallery-pic {
+    width: 300px;
+  }
 
-@media (min-width: 720px)  {
-
-    .carousel-container {
-        height: 500px;
-        overflow: hidden;
-    }
-   
-    .gallery-pic {
-        width: 300px;
-    }
-
-    section {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    
+  section {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 
-@media (min-width: 1250px)  {
+@media (min-width: 960px) {
+  .content-container {
+    flex-direction: row;
+  }
 
-    h1 {
-        padding: 5rem;
-    }
+  .article-detail {
+    text-align: left;
+  }
 
-    #gallery-container {
-        width: 100%;
-    }
+  .article-visit-button {
+    text-align: center;
+    margin: 0;
+  }
 
-    section {
-        padding-left: 20%;
-        padding-right: 20%;
-    }
-    
+  .fact-image {
+      margin :0
+  }
+}
+
+@media (min-width: 1250px) {
+  h1 {
+    padding: 5rem;
+  }
+
+  #gallery-container {
+    width: 100%;
+  }
+
+  section {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }
