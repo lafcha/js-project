@@ -65,12 +65,26 @@ h1 {
 .controls-container {
   margin: auto;
   text-align: center;
-  padding-top: 1rem;
+  position: absolute;
+  top : 45%;
+  left: 2%;
+  right: 2%;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.carousel-wrapper {
+  position: relative;
 }
 
 .carousel-control {
   font-size: 3rem;
+  color: white;
+ 
 }
+
+
 
 
 /************* FACTS ABOUT SPACE ***********/

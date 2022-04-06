@@ -1,8 +1,11 @@
 $(document).ready(function(){
 	$(function() {
+
         $('.jcarousel').jcarousel({
-            // Core configuration goes here
+          
+     
         });
+
     
         $('.jcarousel-prev').jcarouselControl({
             target: '-=1'
@@ -11,6 +14,10 @@ $(document).ready(function(){
         $('.jcarousel-next').jcarouselControl({
             target: '+=1'
         });
+        $('.jcarousel').jcarousel({
+            wrap: 'circular'
+        });
+
     });
     
 });
