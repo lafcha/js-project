@@ -20,18 +20,21 @@
       rel="stylesheet"
     />
 
-    <!--Scripts-->
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-<!--     <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script> -->
-    <script src="script.js"></script>
-
     <!--Style-->
     <link href="normalize.css" rel="stylesheet" />
     <link href="style.css" rel="stylesheet" />
+
+    <!--Scripts-->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    -
+    <script src="carousel-plugin.js"></script>
+    <script src="carousel.js"></script>
+    <script src="script.js"></script>
 
     <title>All about space</title>
   </head>
@@ -45,8 +48,24 @@
         <p>Gallery</p>
         <p>Comments</p>
       </nav>
-      <div class="carousel-container">
-        <img class="carousel-pic" src="pic/space-banner.jpg" alt="" />
+      <div>
+        <div class="carousel-container jcarousel">
+          <ul>
+            <li><img src="pic/carousel-1.jpg" alt="" /></li>
+            <li><img src="pic/carousel-2.jpg" alt="" /></li>
+            <li><img src="pic/carousel-3.jpg" alt="" /></li>
+            <li><img src="pic/carousel-1.jpg" alt="" /></li>
+            <li><img src="pic/carousel-2.jpg" alt="" /></li>
+            <li><img src="pic/carousel-3.jpg" alt="" /></li>
+          </ul>
+        </div>
+        <!-- Controls -->
+        <div class="controls-container">
+          <a class="jcarousel-prev carousel-control" href="#"><span class="iconify" data-icon="bi:arrow-left-circle"></span></a>
+          <a class="jcarousel-next carousel-control" href="#"><span class="iconify" data-icon="bi:arrow-right-circle"></span></a>
+        </div>
+
+
       </div>
     </header>
     <main>
@@ -54,15 +73,14 @@
       <section id="facts-section">
         <h2>5 Articles to read about space</h2>
         <p id="facts-subtitle" class="facts-subtitle">
-         Click here to see the facts
+          Click here to see the facts
           <span
             id="facts-reload"
             class="iconify"
             data-icon="radix-icons:reload"
           ></span>
         </p>
-        <div id="facts-container">
-        </div>
+        <div id="facts-container"></div>
       </section>
 
       <!-------GALLERY SECTION------->
