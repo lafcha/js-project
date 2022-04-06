@@ -24,10 +24,12 @@ nav {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   text-align: center;
   padding: 2rem;
   font-family: "Send Flowers", cursive;
+  color: #b03eae;
+  
 }
 
 
