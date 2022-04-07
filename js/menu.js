@@ -3,7 +3,7 @@
     function displayDropDown() {
             
 
-        document.getElementById('menu-wrapper').style.display = "block";
+        document.getElementById('menu-wrapper').style.display = "flex";
 
 
     }

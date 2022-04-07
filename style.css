@@ -33,6 +33,7 @@ h1 {
 
 .menu-items {
   display: none;
+  flex-direction: column;
 
 }
 
@@ -40,6 +41,7 @@ h1 {
   text-align: center;
   padding : 1rem 0;
   border-top: solid 1px #b03eae;
+  text-transform: uppercase;
 }
 
 .menu-item:first-child {
@@ -282,6 +284,17 @@ footer p:last-of-type {
     width: 100vw;
     flex-direction: row;
     justify-content: space-around;
+    
+  }
+
+  .menu-item {
+    padding : 0;
+    border-top: none;
+  
+  }
+
+  .menu-item:first-child {
+    margin-top: 0;
   }
 
   #menu {
