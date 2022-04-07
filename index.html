@@ -34,6 +34,8 @@
     ></script>
     <script src="js/carousel-plugin.js" defer></script>
     <script src="js/carousel.js" defer></script>
+    <script src="js/menu.js" ></script>
+    <script src="js/facts.js" ></script>
     <script src="js/script.js" defer></script>
 
     <title>JS | All about space</title>
@@ -43,10 +45,21 @@
     <header>
       <h1>All about space</h1>
       <nav>
-        <p>Home</p>
-        <p>Facts</p>
-        <p>Gallery</p>
-        <p>Comments</p>
+        <p id="menu">
+          Menu
+          <span
+            id="hamburger-icon"
+            class="iconify"
+            data-icon="cil:hamburger-menu"
+          ></span>
+        </p>
+        <div class="menu-items" id="menu-wrapper">
+          <p class="menu-item">Home</p>
+          <p class="menu-item">Facts</p>
+          <p class="menu-item">Gallery</p>
+          <p class="menu-item">Comments</p>
+          <p class="menu-item">Games</p>
+        </div>
       </nav>
       <div class="carousel-wrapper">
         <div class="carousel-container jcarousel">

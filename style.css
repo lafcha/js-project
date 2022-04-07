@@ -29,9 +29,39 @@ h1 {
   padding: 2rem;
   font-family: "Send Flowers", cursive;
   color: #b03eae;
-  
 }
 
+.menu-items {
+  display: none;
+  flex-direction: column;
+
+}
+
+.menu-item {
+  text-align: center;
+  padding : 1rem 0;
+  border-top: solid 1px #b03eae;
+  text-transform: uppercase;
+}
+
+.menu-item:first-child {
+
+  margin-top: 1rem;
+  border-top: none;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#menu {
+  width: 100%;
+  text-align: center;
+}
+
+#hamburger-icon {
+  transform: translate(5px, 16%);
+}
 
 /********Carousel***********/
 .jcarousel {
@@ -39,14 +69,11 @@ h1 {
   overflow: hidden;
   width: 100vw;
   height: 400px;
- 
 }
 
 .jcarousel ul {
   width: 100000000000000em;
   position: relative;
- 
-
 
   /* Optional, required in this case since it's a <ul> element */
   list-style: none;
@@ -57,7 +84,6 @@ h1 {
 .jcarousel li {
   /* Required only for block elements like <li>'s */
   float: left;
- 
 }
 
 .jcarousel img {
@@ -68,7 +94,7 @@ h1 {
   margin: auto;
   text-align: center;
   position: absolute;
-  top : 45%;
+  top: 45%;
   left: 2%;
   right: 2%;
   display: flex;
@@ -83,11 +109,7 @@ h1 {
 .carousel-control {
   font-size: 3rem;
   color: white;
- 
 }
-
-
-
 
 /************* FACTS ABOUT SPACE ***********/
 
@@ -105,8 +127,7 @@ h1 {
   color: #b03eae;
   transform: translate(5px, 30%);
   font-size: 1.5rem;
-  cursor:pointer;
-  
+  cursor: pointer;
 }
 
 article {
@@ -124,6 +145,7 @@ article:last-child {
 
 .fact-container h3 {
   line-height: 1.2rem;
+  overflow: hidden;
 }
 
 .title-container {
@@ -157,7 +179,7 @@ article:last-child {
 .article-detail {
   margin: 0.5rem 0;
   text-align: center;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
 }
 
 .article-visit-button {
@@ -171,8 +193,6 @@ article:last-child {
   margin: auto;
   text-decoration: none;
 }
-
-
 
 /***********GALLERY*******************/
 
@@ -259,6 +279,28 @@ footer p:last-of-type {
 /******************* MEDIA QUERIES ******************/
 
 @media (min-width: 720px) {
+  .menu-items {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+    
+  }
+
+  .menu-item {
+    padding : 0;
+    border-top: none;
+  
+  }
+
+  .menu-item:first-child {
+    margin-top: 0;
+  }
+
+  #menu {
+    display: none;
+  }
+
   .carousel-container {
     height: 400px;
     overflow: hidden;
@@ -289,7 +331,7 @@ footer p:last-of-type {
   }
 
   .fact-image {
-      margin :0
+    margin: 0;
   }
 }
 
