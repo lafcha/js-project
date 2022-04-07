@@ -213,8 +213,85 @@ article:last-child {
   padding-bottom: 2rem;
 }
 
+
+/******Form*******/
 form {
   margin-bottom: 2.5rem;
+  background-color: rgba(176, 62, 174, 0.32);
+  padding : 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+
+}
+
+form h3 {
+  font-family: "Send Flowers", cursive;
+  text-transform: none;
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: normal;
+  margin-bottom: 2rem;
+}
+
+
+
+input {
+
+  border-color: #b03eae;
+  border: solid .5px #b03eae;
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background-color:transparent;
+  margin : 1rem 10%;
+  height: 2rem;
+ 
+}
+
+input:focus{
+  border-color: black;
+}
+
+label {
+  margin: auto;
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .2rem;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment-input {
+  height: 100px;
+
+}
+
+#send-btn {
+  background-color: #b03eae;
+  border-bottom: none;
+  border-radius: 5px;
+  padding: .5rem 2rem;
+  color: white;
+  margin :auto;
+  text-align: center;
+}
+
+.input {
+  border-bottom: solid 1 #b03eae;
+}
+
+
+
+
+/******Comment display*******/
+#comments {
+  margin-top: 6rem;
 }
 
 .comment {
