@@ -1,16 +1,26 @@
 
 
-    function displayDropDown() {
-            
+    function toggleMenu(classes, target) {
+        let down = classes.toggle('down');
 
-        document.getElementById('menu-wrapper').style.display = "flex";
-
+		if(down) {
+			displayMenu(target);
+	
+		}else {
+			hideMenu(target);
+		}
 
     }
 
-    function hideDropDown(){
+    function displayMenu(target) {
+           
+        document.getElementById(target).style.display = "flex";
 
-        document.getElementById('menu-wrapper').style.display = "none";
+    }
+
+    function hideMenu(target){
+
+        document.getElementById(target).style.display = "none";
     }
 
 

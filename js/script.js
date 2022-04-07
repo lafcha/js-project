@@ -9,23 +9,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	//Au click sur le bouton Menu
 	menu.addEventListener('click', function(){
-		let down = classes.toggle('down');
-
-		if(down) {
-			displayDropDown();
-	
-		}else {
-			hideDropDown();
-		}
-
+		toggleMenu(classes, "menu-wrapper");
 	});
 
 	// On gère le cas où l'écran est > 750px 
 	window.addEventListener("resize", function() {
 		if (window.matchMedia("(min-width: 720px)").matches) {
-			document.getElementById('menu-wrapper').style.display = "flex";
+			displayMenu("menu-wrapper");
 		} else {
-			document.getElementById('menu-wrapper').style.display = "none";
+			hideMenu("menu-wrapper");
 		}
 	  })
 
