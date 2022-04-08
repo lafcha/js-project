@@ -37,6 +37,7 @@
     <script src="js/menu.js"></script>
     <script src="js/facts.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/script.js" defer></script>
 
     <title>JS | All about space</title>
@@ -105,9 +106,35 @@
       <section id="gallery-section">
         <h2>Gallery</h2>
         <div class="display-icons">
-          <span id="display-grid" class="iconify" data-icon="gg:display-grid"></span>
-          <span id="display-full" class="iconify" data-icon="gg:display-fullwidth"></span>
+          <span
+            id="display-grid"
+            class="iconify"
+            data-icon="gg:display-grid"
+          ></span>
+          <span
+            id="display-full"
+            class="iconify"
+            data-icon="gg:display-fullwidth"
+          ></span>
+          <span
+            id="add-img-icon"
+            class="iconify"
+            data-icon="akar-icons:plus"
+          ></span>
         </div>
+        <form id="gallery-form">
+          <h3>Add a new image to the gallery</h3>
+          <div>
+            <label for="new-img"></label>
+            <input
+              type="file"
+              id="new-Img"
+              name="new-Img"
+              accept="image/png, image/jpeg"
+            />
+          </div>
+        </form>
+
         <div id="gallery-container">
           <img class="gallery-pic" src="pic/space-gallery.jpg" />
           <img class="gallery-pic" src="pic/space-gallery.jpg" />
@@ -130,7 +157,7 @@
           </div>
           <div class="input-block">
             <label for="comment-input">Comment</label>
-            <textarea type="input" class="input" id="comment-input"></textarea> 
+            <textarea type="input" class="input" id="comment-input"></textarea>
             <input type="submit" value="Send" id="send-btn" />
           </div>
         </form>
