@@ -19,8 +19,6 @@
 
     }
 
-
-
     function createAllArticles(data) {
         let factsContainer = document.getElementById('facts-container');
         factsContainer.innerHTML = "";
@@ -93,7 +91,6 @@
 
         let factsContainer = document.getElementById('facts-container');
         factsContainer.appendChild(newArticle);
-
 
     }
 

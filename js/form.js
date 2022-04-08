@@ -6,6 +6,10 @@ let errorsArray = [];
  */
 function handleForm(event) {
 
+    if (document.getElementById('form-error-wrapper')) {
+        document.getElementById('comment-form').removeChild(document.getElementById('form-error-wrapper'));
+    }
+
     let nameInputValue = document.getElementById('name-input').value;
     let commentInputValue = document.getElementById("comment-input").value;
 
@@ -14,18 +18,16 @@ function handleForm(event) {
     formValidation(nameInputValue, commentInputValue);
 
     if (errorsArray.length == 0) {
-        addNewComment(commentInputValue, commentInputValue);
+        addNewComment(nameInputValue, commentInputValue);
         // On vide les inputs
         document.getElementById('name-input').value = "";
         document.getElementById("comment-input").value = "";
 
     } else {
-        displayFormErrors();
+        displayFormErrors(errorsArray);
     }
 
-    console.log(errorsArray);
-    //Vider errorsArray
-    //vIDER input
+    errorsArray = [];
 
 };
 
@@ -89,7 +91,7 @@ function addNewComment(nameInputValue, commentInputValue) {
     let today = new Date();
     let options = { month: 'long' };
     let month = new Intl.DateTimeFormat('en-US', options).format(today.getMonth() + 1);
-    var date = " ON " + month + " " + today.getDate() + " " + today.getFullYear() + " | " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var date = " ON " + month + " " + today.getDate() + " " + today.getFullYear() + " - " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     commentDate.innerHTML = date;
 
     //On raccroche h3 & date à detail
@@ -110,13 +112,38 @@ function addNewComment(nameInputValue, commentInputValue) {
     //Ajout de newComment en haut de la liste
     commentWrapper.insertBefore(newComment, commentWrapper.children[0]);
 
-
-
-
 }
 
 
-function displayFormErrors() {
+function displayFormErrors(errorsArray) {
+
+
+    let errorMessages = {
+        "emptyComment": "Le champ \"commentaire\" est vide",
+        "emptyName": "Le champ \"nom\" est vide",
+        "tooShortComment": "Le champ \"commentaire\" ne contient pas assez de caractères",
+        "tooShortName": "Le champ \"nom\" ne contient pas assez de caractères",
+        "chars": "Le champ nom contient des caractères spéciaux"
+    }
+
+    let errorsWrapper = document.createElement("div");
+    errorsWrapper.id = "form-error-wrapper";
+
+    for (let i = 0; i < errorsArray.length; i++) {
+        for (message in errorMessages) {
+
+            if (errorsArray[i] == message) {
+
+                let errorMessage = document.createElement("p");
+                errorMessage.className = "form-error-message";
+                errorMessage.innerHTML = errorMessages[message];
+                errorsWrapper.appendChild(errorMessage);
+            }
+
+        }
+
+    }
+
+    document.getElementById('comment-form').insertBefore(errorsWrapper, document.getElementById('comment-form').children[1]);
 
 }
-
