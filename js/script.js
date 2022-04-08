@@ -35,6 +35,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	//Au click sur le bouton +
 	document.getElementById('add-img-icon').addEventListener('click', toggleForm);
 
+	//Quand on clique sur "parcourir", et qu'on change donc sa valeur
+	document.getElementById('new-img').addEventListener('change', function(e) {
+		displayNewImage(e)
+	});
+
+
+
 	/***************COMMENTS FORM*******************/
 
 	//Lorsque le formulaire est soumis
