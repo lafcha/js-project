@@ -16,3 +16,13 @@ function displayFull(){
       pics[i].style.margin = "auto";
     }
 }
+
+function toggleForm(){
+    let form = document.getElementById('gallery-form');
+    if(form.style.display === "none"){
+        form.style.display ="block";
+    } else {
+        form.style.display ="none";
+    }
+
+}

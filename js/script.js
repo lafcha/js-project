@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	})
 
 	/***************FACTS*******************/
-	
+
 	//Au click sur le bouton relaod des facts
 	document.getElementById('facts-reload').addEventListener('click', displayFacts);
 
@@ -30,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById('display-grid').addEventListener('click', displayGrid);
 	document.getElementById('display-full').addEventListener('click', displayFull);
 
+	/*********Gallery Form***********/
+
+	//Au click sur le bouton +
+	document.getElementById('add-img-icon').addEventListener('click', toggleForm);
 
 	/***************COMMENTS FORM*******************/
 
@@ -37,6 +41,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById('comment-form').addEventListener('submit', handleForm);
 
 
-	
+
 
 });
