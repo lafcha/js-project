@@ -21,7 +21,7 @@
 
     function createAllArticles(data) {
         let factsContainer = document.getElementById('facts-container');
-        factsContainer.innerHTML = "";
+        factsContainer.textContent = "";
 
         // Get the number of data gotten by the API
         let nbOfFacts = data.length;
@@ -67,20 +67,20 @@
         //Details 
         let articleDetail = document.createElement('p');
         articleDetail.className = 'article-publication-date article-detail';
-        articleDetail.innerHTML = "Published on: " + dateFromAPI;
+        articleDetail.textContent = "Published on: " + dateFromAPI;
         articleDetails.appendChild(articleDetail);
 
         //Website
         let website = document.createElement('p');
         website.className = 'article-website article-detail';
-        website.innerHTML = "Website: " + article.newsSite;
+        website.textContent = "Website: " + article.newsSite;
         articleDetails.appendChild(website);
 
         //Visit Button
         let visitButton = document.createElement('a');
         visitButton.className = 'article-visit-button article-detail';
         visitButton.setAttribute('src', article.url);
-        visitButton.innerHTML = "Visit";
+        visitButton.textContent = "Visit";
         articleDetails.appendChild(visitButton);
 
         // On relie à containContainer
@@ -97,7 +97,7 @@
     function displayError(error) {
         let alert = document.createElement('div');
         alert.className = 'facts-subtitle';
-        alert.innerHTML = "Le serveur n'a pas répondu. Erreur " + error;
+        alert.textContent = "Le serveur n'a pas répondu. Erreur " + error;
 
         let subtitle = document.getElementById('facts-subtitle');
         let factsSection = document.getElementById('facts-section');

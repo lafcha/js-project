@@ -81,7 +81,7 @@ function addNewComment(nameInputValue, commentInputValue) {
 
     //Création du h3
     let commentTitle = document.createElement("h3");
-    commentTitle.innerHTML = "Written By " + nameInputValue + " ";
+    commentTitle.textContent = "Written By " + nameInputValue + " ";
 
     //Création de la date
     let commentDate = document.createElement("p");
@@ -92,7 +92,7 @@ function addNewComment(nameInputValue, commentInputValue) {
     let options = { month: 'long' };
     let month = new Intl.DateTimeFormat('en-US', options).format(today.getMonth() + 1);
     var date = " ON " + month + " " + today.getDate() + " " + today.getFullYear() + " - " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    commentDate.innerHTML = date;
+    commentDate.textContent = date;
 
     //On raccroche h3 & date à detail
     commentDetail.appendChild(commentTitle);
@@ -101,7 +101,7 @@ function addNewComment(nameInputValue, commentInputValue) {
     //Création de commentText
     let commentText = document.createElement("div");
     commentText.className = "comment-text";
-    commentText.innerHTML = commentInputValue;
+    commentText.textContent = commentInputValue;
 
 
     //On raccroche commentDetail & commentText à newComment
@@ -136,7 +136,7 @@ function displayFormErrors(errorsArray) {
 
                 let errorMessage = document.createElement("p");
                 errorMessage.className = "form-error-message";
-                errorMessage.innerHTML = errorMessages[message];
+                errorMessage.textContent = errorMessages[message];
                 errorsWrapper.appendChild(errorMessage);
             }
 
