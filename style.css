@@ -196,17 +196,34 @@ article:last-child {
 
 /***********GALLERY*******************/
 
+#gallery-section h2 {
+  margin-bottom: 1rem;
+}
+
+.display-icons {
+  font-size: 2rem;
+  text-align: center;
+  color: #b03eae;
+  margin-bottom: 2rem;
+}
+
+
 #gallery-container {
   display: flex;
-  width: 100%;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+ 
 }
 
-.gallery-pic {
-  width: 300px;
+.gallery-pic{
+
+  margin: auto;
+  
 }
+
+
 /*************COMMENTS****************/
 
 #comments-section {
@@ -250,7 +267,7 @@ form h3 {
 
 
 
-input {
+input, textarea {
 
   border-color: #b03eae;
   border: solid .5px #b03eae;
