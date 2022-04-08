@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById('facts-reload').addEventListener('click', displayFacts);
 
 
+	/***************GALLERY*******************/
+	document.getElementById('display-grid').addEventListener('click', displayGrid);
+	document.getElementById('display-full').addEventListener('click', displayFull);
+
+
 	/***************COMMENTS FORM*******************/
 
 	//Lorsque le formulaire est soumis
