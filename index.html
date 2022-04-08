@@ -36,6 +36,7 @@
     <script src="js/carousel.js" defer></script>
     <script src="js/menu.js"></script>
     <script src="js/facts.js"></script>
+    <script src="js/form.js"></script>
     <script src="js/script.js" defer></script>
 
     <title>JS | All about space</title>
@@ -117,16 +118,16 @@
       <section id="comments-section">
         <h2>Comments</h2>
         <!----Comment form---->
-        <form>
+        <form id="comment-form">
           <h3>Leave a comment</h3>
           <div class="input-block">
-            <label>Name</label>
-            <input type="text" class="input" />
+            <label for="name-input">Name</label>
+            <input type="text" class="input" id="name-input" />
           </div>
           <div class="input-block">
-            <label for="">Comment</label>
+            <label for="comment-input">Comment</label>
             <input type="textarea" class="input" id="comment-input" />
-            <input type="button" value="Send" id="send-btn" />
+            <input type="submit" value="Send" id="send-btn" />
           </div>
         </form>
         <!----- Comments ----->
