@@ -32,16 +32,34 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	/*********Gallery Form***********/
 
-	//Au click sur le bouton +
+	//Au click sur le bouton + de la gallery
 	document.getElementById('add-img-icon').addEventListener('click', toggleForm);
 
-	//Quand on clique sur "parcourir", et qu'on change donc sa valeur
-	document.getElementById('new-img').addEventListener('change', function(e) {
-		displayNewImage(e)
-	});
+
+	//Au click sur n'importe quel bouton + des inputs
+	let inputsPlus = document.querySelectorAll('.gallery-add-input');
 
 
 
+	inputsPlus.forEach(item => {
+
+		let nbOfInputs = 1;
+		item.addEventListener('click', function () {
+			console.log(nbOfInputs);
+			if (nbOfInputs < 5) {
+
+				addNewFormInput(nbOfInputs);
+
+			} else if (nbOfInputs == 6) {
+				displayInputsNbError();
+				console.log(nbOfInputs)
+			}
+			nbOfInputs = nbOfInputs + 1;
+		}
+
+		)
+	}
+	);
 	/***************COMMENTS FORM*******************/
 
 	//Lorsque le formulaire est soumis
