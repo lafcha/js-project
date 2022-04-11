@@ -39,20 +39,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	//Au click sur n'importe quel bouton + des inputs
 	let inputsPlus = document.querySelectorAll('.gallery-add-input');
 
-
-
 	inputsPlus.forEach(item => {
 
 		let nbOfInputs = 1;
 		item.addEventListener('click', function () {
-			console.log(nbOfInputs);
-			if (nbOfInputs < 5) {
 
+			if (nbOfInputs < 5) {
 				addNewFormInput(nbOfInputs);
 
 			} else if (nbOfInputs == 6) {
 				displayInputsNbError();
-				console.log(nbOfInputs)
+
 			}
 			nbOfInputs = nbOfInputs + 1;
 		}
@@ -60,6 +57,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		)
 	}
 	);
+
+	// Au click de soumission du formulaire 
+	document.getElementById('gallery-form').addEventListener('submit', handleImageForm);
+
 	/***************COMMENTS FORM*******************/
 
 	//Lorsque le formulaire est soumis
