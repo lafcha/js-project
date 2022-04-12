@@ -38,8 +38,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	closeIcons.forEach(btn =>{
 		btn.addEventListener('click', function (event) {
-
-			
+		
 			deleteGalleryImg(event);
 	
 		});

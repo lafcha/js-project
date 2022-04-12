@@ -87,18 +87,10 @@ function handleImageForm(event) {
 
 
         let inputValue = input.value;
-        console.log("inputvalue",input.value);
-
+       
         if (inputIsUrl(inputValue)) {
-            //On créer une nouvelle div image
-
-            let newImgDiv = document.createElement('img');
-            newImgDiv.classList.add('gallery-pic');
-            newImgDiv.setAttribute("src", inputValue);
-
-            document.getElementById("gallery-container").prepend(newImgDiv);
-           
-            //On vide l'input
+        
+            displayNewImage(inputValue);
            input.value = "";       
 
         } else {
@@ -156,5 +148,36 @@ function displayErrorUrl(input) {
 
    
  
+
+}
+
+function displayNewImage(inputValue){
+
+    let imgWrapper = document.createElement('div');
+    imgWrapper.classList.add('img-wrapper')
+
+    //Image
+    let newImgDiv = document.createElement('img');
+    newImgDiv.classList.add('gallery-pic');
+    newImgDiv.setAttribute("src", inputValue);
+
+    //Overlay
+    let imgOverlay = document.createElement('div');
+    imgOverlay.classList.add('img-overlay');
+
+    //Spans
+    let outerSpan = document.createElement('span');
+    outerSpan.classList.add('close-img-icon');
+
+    let innerSpan = document.createElement('span');
+    innerSpan.classList.add('iconify');
+    innerSpan.setAttribute('data-icon', "akar-icons:cross");
+
+
+    outerSpan.append(innerSpan);
+    imgOverlay.append(outerSpan);
+    imgWrapper.append(newImgDiv);
+    imgWrapper.append(imgOverlay);
+    document.getElementById("gallery-container").prepend(imgWrapper);
 
 }
