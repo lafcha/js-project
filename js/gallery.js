@@ -83,41 +83,37 @@ function handleImageForm(event) {
 
     let inputs = document.querySelectorAll('.gallery-url-input');
 
-     //TODO: On supprime tous les messages d'erreurs
+    let errorDivs = document.getElementsByClassName('url-error');
 
-     
+    for (let i = 0; i<errorDivs.length; i++){
+        errorDivs[i].remove();
+    }
 
     inputs.forEach(input => {
 
-       
 
         let inputValue = input.value;
-
+        console.log("inputvalue",input.value);
 
         if (inputIsUrl(inputValue)) {
-
-
-        console.log(inputValue);
-
             //On créer une nouvelle div image
 
             let newImgDiv = document.createElement('img');
             newImgDiv.classList.add('gallery-pic');
             newImgDiv.setAttribute("src", inputValue);
-            
+
             document.getElementById("gallery-container").prepend(newImgDiv);
-
-            //On vide l'input
-            input.value = "";
-
            
-
+            //On vide l'input
+           input.value = "";       
 
         } else {
+
+          
+            
             displayErrorUrl(input);
+
         }
-
-
 
     });
 
@@ -142,16 +138,18 @@ function inputIsUrl(inputValue) {
 
 function displayErrorUrl(input) {
 
-    //Get nb of input
-    let inputNb = input.id.slice(8);
-
+    
+    
     //Get wrapper
-    let wrapper = document.getElementById('wrapper-img-' + inputNb);
-
+    let wrapper = input.parentNode;
+ 
     let error = document.createElement('div');
-    error.classList.add('form-img-error', 'url-error')
+    error.classList.add('form-img-error');
+    error.classList.add('url-error');
     error.textContent = "Please enter a valid url";
-
     wrapper.append(error);
+
+   
+ 
 
 }
