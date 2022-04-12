@@ -30,6 +30,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById('display-grid').addEventListener('click', displayGrid);
 	document.getElementById('display-full').addEventListener('click', displayFull);
 
+
+	/*********Gallery images*********/
+
+	/*Delete an image*/
+	let closeIcons = document.querySelectorAll('.close-img-icon');
+
+	closeIcons.forEach(btn =>{
+		btn.addEventListener('click', function (event) {
+
+			
+			deleteGalleryImg(event);
+	
+		});
+
+	}) 
+
+
 	/*********Gallery Form***********/
 
 	//Au click sur le bouton + de la gallery
