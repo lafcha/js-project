@@ -250,7 +250,7 @@ article:last-child {
   font-size: 30px;
   position: absolute;
   top: 10%;
-  left: 90%;
+  right: 10%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;

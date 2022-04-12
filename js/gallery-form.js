@@ -5,7 +5,6 @@
 
 function toggleForm() {
 
-    console.log('hello')
     let form = document.getElementById('gallery-form');
     if (form.style.display === "none") {
         form.style.display = "block";
@@ -79,7 +78,7 @@ function handleImageForm(event) {
 
     let errorDivs = document.getElementsByClassName('url-error');
 
-    for (let i = 0; i<errorDivs.length; i++){
+    for (let i = 0; i < errorDivs.length; i++) {
         errorDivs[i].remove();
     }
 
@@ -87,16 +86,16 @@ function handleImageForm(event) {
 
 
         let inputValue = input.value;
-       
+
         if (inputIsUrl(inputValue)) {
-        
+
             displayNewImage(inputValue);
-           input.value = "";       
+            input.value = "";
 
         } else {
 
-          
-            
+
+
             displayErrorUrl(input);
 
         }
@@ -135,23 +134,23 @@ function inputIsUrl(inputValue) {
 
 function displayErrorUrl(input) {
 
-    
-    
+
+
     //Get wrapper
     let wrapper = input.parentNode;
- 
+
     let error = document.createElement('div');
     error.classList.add('form-img-error');
     error.classList.add('url-error');
     error.textContent = "Please enter a valid url";
     wrapper.append(error);
 
-   
- 
+
+
 
 }
 
-function displayNewImage(inputValue){
+function displayNewImage(inputValue) {
 
     let imgWrapper = document.createElement('div');
     imgWrapper.classList.add('img-wrapper')
@@ -179,5 +178,12 @@ function displayNewImage(inputValue){
     imgWrapper.append(newImgDiv);
     imgWrapper.append(imgOverlay);
     document.getElementById("gallery-container").prepend(imgWrapper);
+
+    imgWrapper.addEventListener('click', function (event) {
+
+        deleteGalleryImg(event);
+
+    });
+
 
 }
