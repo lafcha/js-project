@@ -124,15 +124,27 @@
         </div>
         <form id="gallery-form">
           <h3>Add a new image to the gallery</h3>
-          <div>
-            <label for="new-img"></label>
-            <input
-              type="file"
-              id="new-Img"
-              name="new-Img"
-              accept="image/png, image/jpeg"
-            />
+          <p class="form-note">Please note that only works with url!</p>
+          <div class="gallery-inputs">
+            <div class="gallery-input-wrap"id ="wrapper-img-1">
+              <label for="new-img">Add a new url</label>
+              <input
+                type="text"
+                id="new-img-1"
+                name="new-img"
+                class="gallery-url-input"
+              />
+              <span class="gallery-add-input">
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+              </span>
+            </div>
           </div>
+          <input
+            type="submit"
+            value="Send"
+            id="img-send-btn"
+            class="submit-btn"
+          />
         </form>
 
         <div id="gallery-container">
@@ -158,7 +170,12 @@
           <div class="input-block">
             <label for="comment-input">Comment</label>
             <textarea type="input" class="input" id="comment-input"></textarea>
-            <input type="submit" value="Send" id="send-btn" />
+            <input
+              type="submit"
+              value="Send"
+              id="send-btn"
+              class="submit-btn"
+            />
           </div>
         </form>
         <!----- Comments ----->
