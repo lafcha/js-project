@@ -217,9 +217,53 @@ article:last-child {
   gap: 1rem;
 }
 
+
+/***Images****/
+
 .gallery-pic {
   width: 300px;
 }
+
+
+.img-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+}
+
+.img-wrapper:hover img {
+  opacity: .5;
+}
+ 
+ .img-wrapper {
+  position: relative;
+}
+
+.close-img-icon {
+  color: #b03eae;
+  font-size: 30px;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.img-wrapper:hover .img-overlay {
+  opacity: 1;
+ 
+}
+
+.close-img-icon:hover{
+  cursor: pointer;
+} 
 
 /*****Form*****/
 
