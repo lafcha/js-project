@@ -37,6 +37,7 @@
     <script src="js/menu.js"></script>
     <script src="js/facts.js"></script>
     <script src="js/form.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/script.js" defer></script>
 
     <title>JS | All about space</title>
@@ -104,6 +105,48 @@
       <!-------GALLERY SECTION------->
       <section id="gallery-section">
         <h2>Gallery</h2>
+        <div class="display-icons">
+          <span
+            id="display-grid"
+            class="iconify"
+            data-icon="gg:display-grid"
+          ></span>
+          <span
+            id="display-full"
+            class="iconify"
+            data-icon="gg:display-fullwidth"
+          ></span>
+          <span
+            id="add-img-icon"
+            class="iconify"
+            data-icon="akar-icons:plus"
+          ></span>
+        </div>
+        <form id="gallery-form">
+          <h3>Add a new image to the gallery</h3>
+          <p class="form-note">Please note that only works with url!</p>
+          <div class="gallery-inputs">
+            <div class="gallery-input-wrap"id ="wrapper-img-1">
+              <label for="new-img">Add a new url</label>
+              <input
+                type="text"
+                id="new-img-1"
+                name="new-img"
+                class="gallery-url-input"
+              />
+              <span class="gallery-add-input">
+                <span class="iconify" data-icon="akar-icons:plus"></span>
+              </span>
+            </div>
+          </div>
+          <input
+            type="submit"
+            value="Send"
+            id="img-send-btn"
+            class="submit-btn"
+          />
+        </form>
+
         <div id="gallery-container">
           <img class="gallery-pic" src="pic/space-gallery.jpg" />
           <img class="gallery-pic" src="pic/space-gallery.jpg" />
@@ -126,8 +169,13 @@
           </div>
           <div class="input-block">
             <label for="comment-input">Comment</label>
-            <input type="textarea" class="input" id="comment-input" />
-            <input type="submit" value="Send" id="send-btn" />
+            <textarea type="input" class="input" id="comment-input"></textarea>
+            <input
+              type="submit"
+              value="Send"
+              id="send-btn"
+              class="submit-btn"
+            />
           </div>
         </form>
         <!----- Comments ----->
