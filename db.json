@@ -1,0 +1,16 @@
+[
+    {
+        "difficulté": "facile",
+        "paires": 5,
+        "tentatives max":20,
+        "fichiers": [
+            "gallery-pic-1",
+            "gallery-pic-2",
+            "gallery-pic-3",
+            "gallery-pic-4",
+            "gallery-pic-5"
+        ]
+
+    }
+]
+
