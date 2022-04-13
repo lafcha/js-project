@@ -249,8 +249,8 @@ article:last-child {
   color: #b03eae;
   font-size: 30px;
   position: absolute;
-  top: 10%;
-  right: 10%;
+  top: 30px;
+  right: 5px;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
